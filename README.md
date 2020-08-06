@@ -1,1 +1,2 @@
 # DockManager-DataAnalysis
+The sample demonstrates how the user can analyse selected data from a [data grid](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid.html) component through a [data chart](https://www.infragistics.com/products/ignite-ui-angular/angular/components/data-chart.html) representation or [conditional cell formatting](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/framework-and-features/data-analysis.html#conditional-cell-formatting).
