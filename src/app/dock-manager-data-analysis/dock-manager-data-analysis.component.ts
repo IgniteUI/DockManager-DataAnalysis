@@ -190,7 +190,7 @@ export class DockManagerDataAnalysisComponent implements OnInit, AfterViewInit {
             }
         });
 
-        this.overlayService.onOpening.subscribe((evt: OverlayCancelableEventArgs) => {
+        this.overlayService.opening.subscribe((evt: OverlayCancelableEventArgs) => {
             if (evt.componentRef && evt.componentRef.instance &&
                 (evt.componentRef.instance as any).className === "igx-excel-filter") {
                 this.disableContextMenu();
@@ -198,7 +198,7 @@ export class DockManagerDataAnalysisComponent implements OnInit, AfterViewInit {
              }
         });
 
-        this.overlayService.onClosed.subscribe((evt: OverlayEventArgs) => {
+        this.overlayService.closed.subscribe((evt: OverlayEventArgs) => {
             if (evt.componentRef &&
                 evt.componentRef.instance &&
                 (evt.componentRef.instance as any).className === "igx-excel-filter" &&
@@ -423,9 +423,9 @@ export class DockManagerDataAnalysisComponent implements OnInit, AfterViewInit {
         if ((!this.grid.getRowByIndex(this.rowIndex) || (this.grid.rowList.toArray().indexOf(this.grid.getRowByIndex(this.rowIndex)) >= this.grid.rowList.length - 2) && this.rowIndex + 2 < this.grid.dataLength)) {
             const lastFullyVisibleRowIndex = this.grid.rowList.toArray()[this.grid.rowList.length - 3].index;
             const field = this.grid.visibleColumns[this.colIndex].field;
-            cell = this.grid.getCellByColumn(lastFullyVisibleRowIndex, field);
+            cell = this.grid.gridAPI.get_cell_by_index(lastFullyVisibleRowIndex, field);
         } else {
-            cell = this.grid.getCellByColumn(this.rowIndex, this.grid.visibleColumns[this.colIndex].field);
+            cell = this.grid.gridAPI.get_cell_by_index(this.rowIndex, this.grid.visibleColumns[this.colIndex].field);
         }
 
         if (!cell) {
@@ -465,7 +465,7 @@ export class DockManagerDataAnalysisComponent implements OnInit, AfterViewInit {
             return;
         }
 
-        const headerCell = col.headerCell.elementRef.nativeElement;
+        const headerCell = col.headerCell.nativeElement;
         this.contextmenuX = headerCell.getClientRects()[0].right;
         this.contextmenuY = headerCell.getClientRects()[0].bottom;
         this.contextmenu = true;
