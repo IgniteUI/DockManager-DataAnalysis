@@ -150,7 +150,7 @@ export class DockManagerDataAnalysisComponent implements OnInit, AfterViewInit {
                 this.headersRenderButton = false;
             });
 
-        this.grid.columnSelected.pipe(tap(() => this.contextmenu ? this.disableContextMenu() : noop()), debounceTime(100))
+        this.grid.columnSelectionChanging.pipe(tap(() => this.contextmenu ? this.disableContextMenu() : noop()), debounceTime(100))
             .subscribe((args: IColumnSelectionEventArgs) => {
                 if (this._esfOverlayId) {
                     this.overlayService.hide(this._esfOverlayId);
@@ -420,7 +420,7 @@ export class DockManagerDataAnalysisComponent implements OnInit, AfterViewInit {
         }
 
         let cell;
-        if ((!this.grid.getRowByIndex(this.rowIndex) || (this.grid.rowList.toArray().indexOf(this.grid.getRowByIndex(this.rowIndex)) >= this.grid.rowList.length - 2) && this.rowIndex + 2 < this.grid.dataLength)) {
+        if ((!this.grid.getRowByIndex(this.rowIndex) || (this.grid.getRowByIndex(this.rowIndex).index >= this.grid.rowList.length - 2) && this.rowIndex + 2 < this.grid.dataLength)) {
             const lastFullyVisibleRowIndex = this.grid.rowList.toArray()[this.grid.rowList.length - 3].index;
             const field = this.grid.visibleColumns[this.colIndex].field;
             cell = this.grid.gridAPI.get_cell_by_index(lastFullyVisibleRowIndex, field);
