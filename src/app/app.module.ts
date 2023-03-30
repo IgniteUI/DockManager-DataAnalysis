@@ -15,51 +15,44 @@ import { SelectedPipeChart } from './pipes/selected-chart.pipe';
 import { FinancialDataService } from './services/financial-data.service';
 import { DockSlotComponent } from './dock-manager-data-analysis/dock-slot/dock-slot.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    ConditionalFormattingDirective,
-    DockManagerDataAnalysisComponent,
-    ChartIntegrationDirective,
-    NamePipe,
-    FilterTypePipe,
-    SelectedPipeChart,
-    ChartHostDirective,
-    DockSlotComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    IgxButtonModule,
-    IgxDialogModule,
-    IgxDividerModule,
-    IgxGridModule,
-    IgxTabsModule,
-    IgxDataChartCategoryModule,
-    IgxDataChartCoreModule,
-    IgxLegendModule,
-    IgxDataChartInteractivityModule,
-    IgxNumericXAxisModule,
-    IgxNumericYAxisModule,
-    IgxCategoryXAxisModule,
-    IgxItemLegendModule,
-    IgxPieChartModule,
-    IgxDataChartStackedModule,
-    IgxDividerModule,
-    IgxDataChartScatterModule,
-    IgxBarSeriesModule,
-    IgxCategoryChartModule,
-    HttpClientModule
-
-  ],
-  providers: [FloatingPanesService, FinancialDataService],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    IgxDataChartComponent,
-    IgxItemLegendComponent,
-    IgxLegendComponent,
-    IgxPieChartComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    declarations: [
+        AppComponent,
+        ConditionalFormattingDirective,
+        DockManagerDataAnalysisComponent,
+        ChartIntegrationDirective,
+        NamePipe,
+        FilterTypePipe,
+        SelectedPipeChart,
+        ChartHostDirective,
+        DockSlotComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        IgxButtonModule,
+        IgxDialogModule,
+        IgxDividerModule,
+        IgxGridModule,
+        IgxTabsModule,
+        IgxDataChartCategoryModule,
+        IgxDataChartCoreModule,
+        IgxLegendModule,
+        IgxDataChartInteractivityModule,
+        IgxNumericXAxisModule,
+        IgxNumericYAxisModule,
+        IgxCategoryXAxisModule,
+        IgxItemLegendModule,
+        IgxPieChartModule,
+        IgxDataChartStackedModule,
+        IgxDividerModule,
+        IgxDataChartScatterModule,
+        IgxBarSeriesModule,
+        IgxCategoryChartModule,
+        HttpClientModule
+    ],
+    providers: [FloatingPanesService, FinancialDataService],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
 }
