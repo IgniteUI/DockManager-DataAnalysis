@@ -24,6 +24,7 @@
     "igniteui-angular": "^15.1.0",
     "igniteui-angular-charts": "^15.0.1",
     "igniteui-angular-core": "^15.0.1",
+    "igniteui-angular-extras": "^15.1.2",
     "igniteui-dockmanager": "^1.12.4",
     "jszip": "^3.3.0",
     "minireset.css": "~0.0.4",

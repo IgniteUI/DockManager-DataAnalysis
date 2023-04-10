@@ -7,13 +7,14 @@ import {  ConditionalFormattingDirective } from "./directives/conditional-format
 import { FloatingPanesService} from './services/floating-panes.service';
 import { ChartIntegrationDirective, ChartHostDirective} from './directives/chart-integration/chart-integration.directive';
 import { IgxGridModule, IgxButtonModule, IgxDialogModule, IgxDividerModule, IgxTabsModule } from 'igniteui-angular';
-import { IgxDataChartComponent, IgxItemLegendComponent, IgxLegendComponent, IgxPieChartComponent, IgxDataChartCategoryModule, IgxDataChartCoreModule, IgxLegendModule, IgxDataChartInteractivityModule, IgxNumericXAxisModule, IgxNumericYAxisModule, IgxCategoryXAxisModule, IgxItemLegendModule, IgxPieChartModule, IgxDataChartStackedModule, IgxDataChartScatterModule, IgxBarSeriesModule, IgxCategoryChartModule } from 'igniteui-angular-charts';
+import { IgxDataChartCategoryModule, IgxDataChartCoreModule, IgxLegendModule, IgxDataChartInteractivityModule, IgxNumericXAxisModule, IgxNumericYAxisModule, IgxCategoryXAxisModule, IgxItemLegendModule, IgxPieChartModule, IgxDataChartStackedModule, IgxDataChartScatterModule, IgxBarSeriesModule, IgxCategoryChartModule } from 'igniteui-angular-charts';
 import { NamePipe } from './pipes/name.pipe';
 import { FilterTypePipe } from './pipes/filter-type.pipe';
 import {DockManagerDataAnalysisComponent} from './dock-manager-data-analysis/dock-manager-data-analysis.component';
 import { SelectedPipeChart } from './pipes/selected-chart.pipe';
 import { FinancialDataService } from './services/financial-data.service';
 import { DockSlotComponent } from './dock-manager-data-analysis/dock-slot/dock-slot.component';
+import { IgxExtrasModule } from 'igniteui-angular-extras';
 @NgModule({
     declarations: [
         AppComponent,
@@ -48,7 +49,8 @@ import { DockSlotComponent } from './dock-manager-data-analysis/dock-slot/dock-s
         IgxDataChartScatterModule,
         IgxBarSeriesModule,
         IgxCategoryChartModule,
-        HttpClientModule
+        HttpClientModule,
+        IgxExtrasModule
     ],
     providers: [FloatingPanesService, FinancialDataService],
     bootstrap: [AppComponent],
