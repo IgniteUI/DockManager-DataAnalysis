@@ -40,7 +40,7 @@
     "@angular/cli": "^17.2.1",
     "@angular/compiler-cli": "^17.2.2",
     "@angular/language-service": "^17.2.2",
-    "@igniteui/angular-schematics": "^15.1.1110",
+    "@igniteui/angular-schematics": "^17.1.1315",
     "@types/jasmine": "^3.6.0",
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "^13.9.3",
