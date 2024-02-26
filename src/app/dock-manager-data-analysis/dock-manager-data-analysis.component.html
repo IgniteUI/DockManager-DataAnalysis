@@ -125,7 +125,7 @@
 
 <span *ngIf="contextmenu" class="analytics-btn" [ngStyle]="{'left.px': contextmenuX, 'top.px': contextmenuY}"
     (click)="toggleContextDialog(button)">
-    <button #button igxButton="icon">
+    <button #button igxIconButton="flat">
         <igx-icon #icon style="pointer-events: none;" class="icon" family="material">insert_chart_outlined</igx-icon>
     </button>
 </span>
