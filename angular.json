@@ -78,18 +78,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "igniteui-dock-manager-data-analysis:build"
+            "buildTarget": "igniteui-dock-manager-data-analysis:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "igniteui-dock-manager-data-analysis:build:production"
+              "buildTarget": "igniteui-dock-manager-data-analysis:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "igniteui-dock-manager-data-analysis:build"
+            "buildTarget": "igniteui-dock-manager-data-analysis:build"
           }
         },
         "test": {
