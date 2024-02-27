@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  ConditionalFormattingDirective } from "./directives/conditional-formatting/conditional-formatting.directive";
 import { FloatingPanesService} from './services/floating-panes.service';
 import { ChartIntegrationDirective, ChartHostDirective} from './directives/chart-integration/chart-integration.directive';
-import { IgxGridModule, IgxButtonModule, IgxDialogModule, IgxDividerModule, IgxTabsModule } from 'igniteui-angular';
+import { IgxGridModule, IgxButtonModule, IgxDialogModule, IgxDividerModule, IgxTabsModule, IgxIconButtonDirective } from 'igniteui-angular';
 import { IgxDataChartCategoryModule, IgxDataChartCoreModule, IgxLegendModule, IgxDataChartInteractivityModule, IgxNumericXAxisModule, IgxNumericYAxisModule, IgxCategoryXAxisModule, IgxItemLegendModule, IgxPieChartModule, IgxDataChartStackedModule, IgxDataChartScatterModule, IgxBarSeriesModule, IgxCategoryChartModule } from 'igniteui-angular-charts';
 import { NamePipe } from './pipes/name.pipe';
 import { FilterTypePipe } from './pipes/filter-type.pipe';
@@ -50,7 +50,8 @@ import { IgxExtrasModule } from 'igniteui-angular-extras';
         IgxBarSeriesModule,
         IgxCategoryChartModule,
         HttpClientModule,
-        IgxExtrasModule
+        IgxExtrasModule,
+        IgxIconButtonDirective
     ],
     providers: [FloatingPanesService, FinancialDataService],
     bootstrap: [AppComponent],
